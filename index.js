@@ -1,1 +1,14 @@
+const person = new Object({
+  name: 'Ilya',
+  age: 22,
+  greet: function() {
+    console.log('Greet!')
+  }
+})
 
+Object.prototype.sayHello = function() {
+  console.log('Hello!')
+}
+
+const lena = Object.create(person)
+lena.name = 'Elena'
