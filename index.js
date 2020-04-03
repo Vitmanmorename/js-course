@@ -1,17 +1,14 @@
-const person = new Object({
-  name: 'Ilya',
-  age: 22,
-  greet: function() {
-    console.log('Greet!')
-  }
-})
-
-Object.prototype.sayHello = function() {
-  console.log('Hello!')
+  function hello() {
+    console.log('Hello', this)
+}
+  const person = {
+    name: 'Ilya',
+    age: 22,
+    sayHello: hello,
+    sayHelloWindow: hello.bind(document),
+    logInfo: function() {
+      console.log(`Name is ${this.name}`)
+    }
 }
 
-const lena = Object.create(person)
-lena.name = 'Elena'
-
-const str = new String('I am string')
 
