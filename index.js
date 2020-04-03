@@ -10,5 +10,7 @@
       console.log(`Name is ${this.name}`)
     }
 }
-
+let car = {
+  color: "green;"
+};
 
